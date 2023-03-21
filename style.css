@@ -1,0 +1,205 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    background: rgb(254, 253, 253);
+}
+
+body:hover {
+    background-color: black;
+}
+
+p {
+    font-size: 30px;
+}
+
+h1 {
+    font-size: 40px;
+    text-align: center;
+}
+
+.start-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.start-btn button {
+        background-color: rgb(51, 1, 51);
+        border: none;
+        color: white;
+        padding: 12px 24px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 8px;
+}
+
+.start-btn button:hover {
+    background-color: greenyellow; 
+    color: black;
+  }
+
+.info-list {
+    background: linear-gradient(to bottom, white, black);
+    padding: 10px;
+    width: 300px;
+    height:300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-radius: 10%;
+    
+}
+.buttons {
+    position: fixed;
+    margin: 10px;
+}
+
+.quit {
+    color: white;
+    background: linear-gradient(to right, rgb(132, 2, 2), black);
+    border: none;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+    
+.restart {
+    background: linear-gradient(to right, yellowgreen, black);
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.question1 {
+    background: linear-gradient(to bottom, white, black);
+    padding: 10px;;
+    color: black;
+    width: 300px;
+    height:275px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-radius: 10%;
+    
+}
+
+.question2 {
+    background: linear-gradient(to bottom, white, black);
+    padding: 10px;;
+    color: black;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-radius: 10%;
+}
+
+.question3 {
+    background: linear-gradient(to bottom, white, black);
+    padding: 10px;;
+    color: black;
+    width: 300px;
+    height:275px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-radius: 10%;
+}
+
+.submit {
+    font-size: 20px;
+    position: relative;
+    background: greenyellow;
+    border-radius: 10px;
+    height: 60px;
+    width: 100px;
+}
+
+#next1 {
+    flex-wrap: wrap;
+    font-size: 20px;
+    background: linear-gradient(to right, greenyellow, black);
+    border-radius: 10px;
+    height: 60px;
+    width: 100px;
+}
+
+#next2 {
+    flex-wrap: wrap;
+    font-size: 20px;
+    background: linear-gradient(to right, greenyellow, black);
+    border-radius: 10px;
+    height: 60px;
+    width: 100px;
+}
+
+#next3 {
+    flex-wrap: wrap;
+    font-size: 20px;
+    background: linear-gradient(to right, greenyellow, black);
+    border-radius: 10px;
+    height: 60px;
+    width: 100px;
+}
+
+
+.high-score {
+    background: linear-gradient(to bottom, white, black);
+    padding: 10px;;
+    color: black;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-radius: 10%;
+}
+
+.high-score-button {
+    background: linear-gradient(to right, goldenrod, black);
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Quiz Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--Start quiz button-->
+    <div class="start-btn"><button> Start Quiz! </button></div>
+    
+
+    <!-- Info Box -->
+    <div class="info-box">
+        <div class="info-list">
+            <h1> Rules </h1>
+            <div class="info">1. You will have <span>10 seconds</span> per quetion.</div>
+            <div class="info">2. Once you have selected your choice from the multiple choice answers, you will be unable to rechoose.</div>
+            <div class="info">3. You will recieve points based off your answers.</div>
+            <div class="info">4. Enjoy!</div>
+        <div class="buttons">
+            <button class="quit"> I give up </button>
+            <button class="restart"> Lets get started </button>
+            <button class="high-score-button"> High scores </button>
+        </div>
+    </div>
+	<header>
+		<h1> Coding Quiz</h1>
+	</header>
+    </div>
+    <div class="high-score">
+        <h2> High Scores </h2>
+        <li></li>
+        <li></li>
+        <li></li>
+    </div>
+	<main>
+		<form id="quiz-form">
+			<!-- Question 1 -->
+			<div class="question1">
+				<h2>Question 1</h2>
+				<p>What is a data structure?</p>
+				<label>
+					<input type="radio" name="q1" value="a">
+					A storage format that defines the way data is stored, organized, and manipulated.
+				</label>
+				<label>
+					<input type="radio" name="q1" value="b">
+					A loop that repeats data on a webpage
+				</label>
+				<label>
+					<input type="radio" name="q1" value="c">
+					A basic coding language
+				</label>
+                <h2 id="timer">10</h2>
+            <button id="next1"> Next ></button>
+			</div>
+            
+			<!-- Question 2 -->
+			<div class="question2">
+				<h2>Question 2</h2>
+				<p>How do we change the background color of webpage?</p>
+				<label>
+					<input type="radio" name="q2" value="a">
+					By using color selector in html
+				</label>
+				<label>
+					<input type="radio" name="q2" value="b">
+					By adding background-color to CSS
+				</label>
+				<label>
+					<input type="radio" name="q2" value="c">
+					None of the above
+				</label>
+                <h2 id="timer">10</h2>
+                <button id="next2"> Next ></button>
+            </div>
+                <!-- Question 3 -->
+			<div class="question3">
+				<h2>Question 3</h2>
+				<p>What does CSS stand for?</p>
+				<label>
+					<input type="radio" name="q3" value="a">
+					Cool Syntax System
+				</label>
+				<label>
+					<input type="radio" name="q3" value="b">
+					Cascading Style Sheet
+				</label>
+				<label>
+					<input type="radio" name="q3" value="c">
+                    Card Script Select
+                </label>
+                <h2 id="timer">10</h2>
+                <button id="next3"> Next ></button>
+			</div>
+		</form>
+	</main>
+	<script src="/script.js"></script>
+</body>
+</html>
