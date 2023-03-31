@@ -12,13 +12,14 @@ document.addEventListener('DOMContentLoaded', function() {
     var question3 = document.querySelector(".question3");
     var pointsEl = document.querySelector('.high-score');
     
-     // Hide the info box and quiz form initially
+     
     infoBox.style.display = 'none';
     question1.style.display = 'none';
     question2.style.display = 'none';
     question3.style.display = 'none';
     pointsEl.style.display = 'none';
-    // When the user clicks the start button, show the info box
+   
+
       startBtn.addEventListener('click', function() {
       startBtn.style.display = 'none';
       infoBox.style.display = 'block';
@@ -37,22 +38,69 @@ document.addEventListener('DOMContentLoaded', function() {
         startBtn.style.display = 'none';
         questionOne(); 
     });
+
+// Question 1 funciton
+
      function questionOne() {
-        question1.style.display = 'block';
-        document.querySelector('#next1').addEventListener('click', questionTwo);
-     }
-     function questionTwo() {
-        question1.style.display = 'none';
-        question2.style.display = 'block';
-        document.querySelector('#next2').addEventListener('click', questionThree);
-     }
-     function questionThree() {
-        question2.style.display = 'none';
-        question3.style.display = 'block';
-        document.querySelector('#next3').addEventListener('click', points);
+      var secondsRemaining = 10; // set time limit for question 1
+      var countdown = setInterval(function() {
+        secondsRemaining--;
+        document.getElementById("timer").innerHTML = secondsRemaining + " seconds remaining";
+        if (secondsRemaining == 0) {
+          clearInterval(countdown);
+          document.getElementById("timer").innerHTML = "Time's up!";
+        }
+      }, 1000);
+      question1.style.display = 'block';
+      document.querySelector('#next1').addEventListener('click', function() {
+        clearInterval(countdown); // clear current interval
+        questionTwo(); // start next question
+      });
+    }
+
+// Question 2 funtion
 
 
-     }
+    function questionTwo() {
+      var secondsRemaining = 10; 
+      var countdown = setInterval(function() {
+        secondsRemaining--;
+        document.getElementById("timer").innerHTML = secondsRemaining + " seconds remaining";
+        if (secondsRemaining == 0) {
+          clearInterval(countdown);
+          document.getElementById("timer").innerHTML = "Time's up!";
+        }
+      }, 1000);
+      question2.style.display = 'block';
+      document.querySelector('#next2').addEventListener('click', function() {
+        clearInterval(countdown); // clear current interval
+        questionThree(); // start next question
+      });
+    }
+
+// Question 3 function
+
+    function questionThree() {
+      var secondsRemaining = 10; // set time limit for question 1
+      var countdown = setInterval(function() {
+        secondsRemaining--;
+        document.getElementById("timer").innerHTML = secondsRemaining + " seconds remaining";
+        if (secondsRemaining == 0) {
+          clearInterval(countdown);
+          document.getElementById("timer").innerHTML = "Time's up!";
+        }
+      }, 1000);
+      question3.style.display = 'block';
+      document.querySelector('#next3').addEventListener('click', function() {
+        clearInterval(countdown); // clear current interval
+        highScore.style.display = 'block';
+      });
+    }
+    
+    
+
+
+
     // When the user sumbits their answer, thier score is displayed
     quizForm.addEventListener('submit', function(event) {
       event.preventDefault();
@@ -85,6 +133,7 @@ quizForm.addEventListener('submit', function(event) {
       localStorage.setItem('highScore', score);
     }
   });
+
   
   // When the user clicks the high score button, display the high score
 
@@ -101,17 +150,4 @@ highScoreBtn.addEventListener('click', function() {
    highScore.style.display = 'block';
 });
 
-var seconds = 10;
-var countdown = setInterval(function() {
-  seconds--;
-  document.getElementById("timer").innerHTML = seconds + " seconds remaining";
-  if (seconds == 0) {
-    clearInterval(countdown);
-
-    document.getElementById("timer").innerHTML = "Time's up!";
-  }
-}, 1000);
-
 });
-
-  
