@@ -61,22 +61,24 @@ document.addEventListener('DOMContentLoaded', function() {
 // Question 2 funtion
 
 
-    function questionTwo() {
-      var secondsRemaining = 10; 
-      var countdown = setInterval(function() {
-        secondsRemaining--;
-        document.getElementById("timer").innerHTML = secondsRemaining + " seconds remaining";
-        if (secondsRemaining == 0) {
-          clearInterval(countdown);
-          document.getElementById("timer").innerHTML = "Time's up!";
-        }
-      }, 1000);
-      question2.style.display = 'block';
-      document.querySelector('#next2').addEventListener('click', function() {
-        clearInterval(countdown); // clear current interval
-        questionThree(); // start next question
-      });
+function questionTwo() {
+  clearInterval(countdown); // clear any existing interval
+  var secondsRemaining = 10;
+  var countdown = setInterval(function() {
+    secondsRemaining--;
+    document.getElementById("timer").innerHTML = secondsRemaining + " seconds remaining";
+    if (secondsRemaining == 0) {
+      clearInterval(countdown);
+      document.getElementById("timer").innerHTML = "Time's up!";
     }
+  }, 1000);
+  question2.style.display = 'block';
+  document.querySelector('#next2').addEventListener('click', function() {
+    clearInterval(countdown);
+    questionThree();
+  });
+}
+
 
 // Question 3 function
 
@@ -93,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function() {
       question3.style.display = 'block';
       document.querySelector('#next3').addEventListener('click', function() {
         clearInterval(countdown); // clear current interval
-        highScore.style.display = 'block';
+        highScore();
       });
     }
     
@@ -142,7 +144,7 @@ var highScore = document.querySelector('.high-score');
 
 function points() {
     question3.style.display = 'none';
-    pointsEl.style.display = 'block';
+    pointsEl.style.display = '.high-score';
 
 }
 
