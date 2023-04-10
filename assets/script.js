@@ -1,7 +1,7 @@
 // Wait for the page to load before running any JavaScript code
 document.addEventListener('DOMContentLoaded', function() {
 
-    // Get references to the elements we need to interact with
+
     var startBtn = document.querySelector('.start-btn');
     var infoBox = document.querySelector('.info-box');
     var restartBtn = document.querySelector('.restart');
@@ -130,7 +130,7 @@ function questionTwo() {
 quizForm.addEventListener('submit', function(event) {
     event.preventDefault();
     var score = 0;
-    var highScore = parseInt(localStorage.getItem('highScore'));
+    var highScore = parseInt(localStorage.setItem('highScore'));
     if (isNaN(highScore) || score > highScore) {
       localStorage.setItem('highScore', score);
     }
@@ -144,7 +144,7 @@ var highScore = document.querySelector('.high-score');
 
 function points() {
     question3.style.display = 'none';
-    pointsEl.style.display = '.high-score';
+    pointsEl.style.display = 'block';
 
 }
 
