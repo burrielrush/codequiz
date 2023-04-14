@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
       question1.style.display = 'block';
       document.querySelector('#next1').addEventListener('click', function() {
         clearInterval(countdown); // clear current interval
-        questionTwo(); // start next question
+        questionTwo(); 
       });
     }
 
@@ -130,7 +130,7 @@ function questionTwo() {
 quizForm.addEventListener('submit', function(event) {
     event.preventDefault();
     var score = 0;
-    var highScore = parseInt(localStorage.setItem('highScore'));
+    var highScore = parseInt(localStorage.getItem('highScore'));
     if (isNaN(highScore) || score > highScore) {
       localStorage.setItem('highScore', score);
     }
@@ -151,5 +151,10 @@ function points() {
 highScoreBtn.addEventListener('click', function() {
    highScore.style.display = 'block';
 });
+
+if (isNaN(highScore) || userScore > highScore) {
+  localStorage.setItem('highScore', userScore);
+  highScoreEl.innerHTML = 'High score: ' + userScore;
+}
 
 });
